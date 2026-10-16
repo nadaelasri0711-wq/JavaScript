@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            display: flex;
+            gap: 10px;
+        }
+        #listOrigin {
+            background-color: yellow;
+            padding: 20px;
+        }
+        #listDestiny{
+            background-color: aquamarine;
+            padding: 20px;
+        }
+        .selected{
+            font-weight: bold;
+            background-color: darkblue;
+            color:white;
+        }
+
+    </style>
+    <script src="dos-listados.js" defer></script>
+</head>
+<body>
+    <h1>Dos listados</h1>
+    <p><p>Crea dos listados. El primero tiene una lista de elementos.
+         Se pueden seleccionar al hacer click. Pulsando un boton 
+         pasan los seleccionados al otro listado.</p>
+
+         <div id="container">
+            <ul id="listOrigin">
+                <li class="selected">hola1</li>
+                <li>hola2</li>
+                <li>hola3</li>
+                <li>hola4</li>
+                <li>hola5</li>
+                <li>hola6</li>
+                <li>hola7</li>
+                <li>hola8</li>
+                <li>hola9</li>
+                <li>hola10</li>
+                <li>hola11</li>
+                <li>hola12</li>
+                <li>hola13</li>
+                <li>hola14</li>
+                <li>hola15</li>
+                <li>hola16</li>
+                <li>hola17</li>
+                <li>hola18</li>
+                <li>hola19</li>
+                <li>hola20</li>
+            </ul>
+            <ul id="listDestiny"></ul>
+         </div>
+         <p>
+            <button onclick="changeElementLeft()">&lt;-</button>
+            Pasar elementos
+            <button onclick="changeElementRight()">-&lt;</button>
+         </p>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To do</title>
+    <style>
+        .selected{
+            background-color: yellow;
+        }
+    </style>
+    <script src="todo.js" defer></script>
+</head>
+<body>
+    <h1>Lista de tareas</h1>
+    <p>
+        <button onclick="sortTasks()">Ordenar Alfabéticamente</button>
+        <button onclick="setSelected()">Seleccionar todos</button>
+    </p>
+    <p>
+        Nueva tarea:
+        <input type="text" name="" id="new-task" value = "algo">
+        <button onclick="buttonInsertTask()">Crear</button>
+    </p>
+    <ul id="todo-list">
+        <li ondblclick="deleteTask(this)" class="selected">Hacer los cuestinarios</li>
+        <li ondblclick="deleteTask(this)" >Hacer los cuestinarios</li>
+    </ul>
+</body>
+</html>
