@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Añadir o eliminar eventos</h1>
+    <p>
+        <button id="funcion1">Añadir funcionalidad 1</button>
+        <button id="funcion2">Quitar funcionalidad 1</button>
+    </p>
+    <p>
+        <button id="boton-accion">Realizar acción</button>
+    </p>
+
+    <script>
+        const funcion1 = document.getElementById('funcion1');
+        const funcion2 = document.getElementById('funcion2');
+        const botonAccion = document.getElementById('boton-accion');
+
+        function saludar1(){
+            console.log("Este es el saludo 1");
+        }
+
+        funcion1.addEvenListener('click', () => botonAccion.addEventListener('click', saludar1));
+        funcion2.addEvenListener('click', () => botonAccion.removeEventListener('click', saludar1));
+
+    </script>
+</body>
+</html>

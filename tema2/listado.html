@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Listado</h1>
+    
+    <ul>
+        
+       <li>element1</li>
+       <li>element2</li>
+       <li>element3</li>
+       <li>element4</li>
+       <li>element5</li>
+       <li>element6</li>
+       <li>element7</li>
+       <li>element8</li>
+       <li>element9</li>
+       <li>element10</li>
+       <li>element11</li>
+       <li>element12</li>
+       <li>element13</li>
+       <li>element14</li>
+       <li>element15</li>
+       <li>element16</li>
+       <li>element17</li>
+       <li>element18</li>
+       <li>element19</li>
+       <li>element20</li>
+       
+    </ul>
+    <script>
+        
+        // Solución 1:
+        /* const listaDeEtiquetasLis= document.querySelectorAll('li');
+        listaDeEtiquetasLis.forEach(li => li.addEventListener('click', () => li.remove())); */
+
+        // ¿Qué tenemos? 20 EventListener, 20 funciones flecha. No es buena solucion.
+
+
+        //Solución 2:
+        /* const listaDeEtiquetasLIs = document.querySelectorAll('li');
+    listaDeEtiquetasLIs. forEach(li =>
+    li.addEventListener('click', borrarElemento)
+    );
+
+    function borrarElemento(event){
+        //this.remove();
+        event.target.remove();
+    } */
+
+    //que tenemos? 20 EventListener, 1 funciones borrar. Es mejor solucin.
+
+    //Solución 3:
+   /*  const listado = document.querySelector('ul');
+
+    listado.addEventListener('click', (event) => event.target.remove()); */
+
+    //que tenemos? 1 EventListener, 1 funciones flecha para borrar.
+// // Es solucion mala porque puede borrar todo el listado
+
+    //Solución 4:
+    const listado = document.querySelector('ul');
+
+    listado.addEventListener('click', (event) => {
+        if (event.target.tagName === "LI"){
+          event.target.remove();  
+        }
+        
+    });
+    // Que tenemos? 1 EventListener, 1 funciones flecha para borrar.
+// Es la mejor solucign.
+
+
+    </script>
+</body>
+</html>
