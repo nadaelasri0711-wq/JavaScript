@@ -1,0 +1,43 @@
+/* PASO 4.2: @import de la fuente descartada.
+   Tiene que ser la primera línea del archivo. */
+
+/* PASO 4.3: un @font-face por cada archivo de la fuente de texto */
+@font-face {
+  font-family: "Texto";
+  src: url("../fonts/NombreFuente-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+/* Añade los bloques de Bold (700, normal) e Italic (400, italic) */
+
+/* PASO 5: escala tipográfica */
+:root {
+  --fuente-titulos: "Nombre de la fuente", serif;
+  --fuente-texto: "Texto", sans-serif;
+  --fs-h1: ;
+  --fs-h2: ;
+  --fs-h3: ;
+  --fs-h4: ;
+  --fs-texto: 1rem;
+  --fs-pie: ;
+}
+
+body {
+  font-family: var(--fuente-texto);
+  font-size: var(--fs-texto);
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--fuente-titulos);
+  line-height: 1.2;
+}
+
+p {
+  max-width: 65ch;
+}
+
+.descartada {
+  font-family: "Nombre de la fuente descartada", sans-serif;
+}
